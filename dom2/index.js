@@ -98,3 +98,20 @@ let books = [
     },
   },
 ];
+const booksContainer = document.getElementById('books');
+
+books.forEach(book => {
+    booksContainer.innerHTML += `
+        <div class="book">
+            <div class="book-image">
+                <img src="${book.imageUrls.medium}" alt="book-image">
+            </div>
+            <div class="book-info">
+                <p>ISBN: ${book.isbn}</p>
+                <p>Title: ${book.bookTitle}</p>
+                <p>Author: ${book.bookAuthor}</p>
+                <p>Year of publication: ${book.yearOfPublication}</p>
+            </div>
+        </div>
+    `;
+});
